@@ -4,9 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./index.scss";
 import App from "./App";
+import { ProductsProvider } from "./context/products.context";
 import { UserProvider } from "./context/user.context";
 import reportWebVitals from "./reportWebVitals";
-import { ProductsProvider } from "./context/products.context";
+import { CartProvider } from "./context/cart.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,9 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <ProductsProvider>
-          <App />
+          <CartProvider>
+            <App />
+          </CartProvider>
         </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
