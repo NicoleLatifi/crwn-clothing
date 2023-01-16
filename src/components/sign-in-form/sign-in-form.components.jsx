@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { SignInContainer } from "./sign-in-form.styles.jsx";
+import { ButtonsContainer, SignInContainer } from "./sign-in-form.styles.jsx";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
 import {
@@ -75,7 +75,7 @@ const SignInForm = () => {
             value: password,
           }}
         />
-        <div className="buttons-container">
+        <ButtonsContainer>
           <Button type="submit">Sign In</Button>
           <Button
             buttonType={BUTTON_TYPE_CLASSES.google}
@@ -84,7 +84,7 @@ const SignInForm = () => {
           >
             Sign in with Google
           </Button>
-        </div>
+        </ButtonsContainer>
       </form>
     </SignInContainer>
   );
